@@ -53,6 +53,7 @@ location "http://download.eclipse.org/releases/mars" {
 location "http://download.eclipse.org/sirius/updates/milestones/3.0.0rc3/mars" {
 	org.eclipse.sirius.runtime.feature.group lazy
 	org.eclipse.sirius.runtime.acceleo.feature.group lazy
+	org.eclipse.sirius.runtime.aql.feature.group lazy
 	//IDE
 	org.eclipse.sirius.runtime.ide.ui.acceleo.feature.group lazy
 	org.eclipse.sirius.runtime.ide.eef.feature.group lazy
@@ -60,6 +61,7 @@ location "http://download.eclipse.org/sirius/updates/milestones/3.0.0rc3/mars" {
 	org.eclipse.sirius.specifier.ide.ui.feature.group lazy
 	org.eclipse.sirius.specifier.ide.ui.acceleo.feature.group lazy
 	org.eclipse.sirius.tests.support.feature.group lazy
+	org.eclipse.sirius.aql.feature.group lazy
 }
 
 // UML compare

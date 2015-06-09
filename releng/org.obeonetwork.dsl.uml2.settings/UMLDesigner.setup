@@ -116,6 +116,10 @@
         name="org.eclipse.sirius.specifier.ide.ui.acceleo.feature.group"/>
     <requirement
         name="org.eclipse.sirius.specifier.ide.ui.acceleo.source.feature.group"/>
+    <requirement
+        name="org.eclipse.sirius.runtime.aql.feature.group"/>
+    <requirement
+        name="org.eclipse.sirius.aql.feature.group"/>
     <repository
         url="http://mbarbero.github.io/fr.obeo.releng.targetplatform/p2/"/>
     <repository
