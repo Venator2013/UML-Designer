@@ -120,6 +120,10 @@
         name="org.eclipse.sirius.runtime.aql.feature.group"/>
     <requirement
         name="org.eclipse.sirius.aql.feature.group"/>
+    <requirement
+        name="org.eclipse.pde.feature.group"/>
+    <requirement
+        name="org.eclipse.jdt.feature.group"/>
     <repository
         url="http://mbarbero.github.io/fr.obeo.releng.targetplatform/p2/"/>
     <repository
