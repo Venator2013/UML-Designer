@@ -124,6 +124,12 @@
         name="org.eclipse.pde.feature.group"/>
     <requirement
         name="org.eclipse.jdt.feature.group"/>
+    <requirement
+        name="org.eclipse.uml2.uml.feature.group"/>
+    <requirement
+        name="org.eclipse.uml2.uml.edit.feature.group"/>
+    <requirement
+        name="org.eclipse.uml2.feature.group"/>
     <repository
         url="http://mbarbero.github.io/fr.obeo.releng.targetplatform/p2/"/>
     <repository
