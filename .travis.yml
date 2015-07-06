@@ -1,15 +1,58 @@
 language: ruby
 env:
   global:
-    secure: "KpzAMqnf5+K5PNmZbcoiaSjWS//sVkPlbjrpb662rrkQcZHslqnAVmy2h+OsSaA6pefhRpzrSmys9vu7Ou4ZPNOBgxlmePOUl+MfEXOe+9EO3G6GLooyvzzk/9rsOYuHMiM6hrJZsPWF2NyIibElqE/l6YKuTUH9XOWnVbGZ+oY="
+    secure: KpzAMqnf5+K5PNmZbcoiaSjWS//sVkPlbjrpb662rrkQcZHslqnAVmy2h+OsSaA6pefhRpzrSmys9vu7Ou4ZPNOBgxlmePOUl+MfEXOe+9EO3G6GLooyvzzk/9rsOYuHMiM6hrJZsPWF2NyIibElqE/l6YKuTUH9XOWnVbGZ+oY=
 before_script:
 - gem install jekyll --version '= 1.5.1'
 - gem install RedCloth
+- sudo apt-get install -y s3cmd
 script:
 - cd documentation
 - jekyll build
-after_script:
-- ls
 - cd ../
+- rm -rf plugins/org.obeonetwork.dsl.uml2.design.doc/html
+- cp -r documentation/ plugins/org.obeonetwork.dsl.uml2.design.doc/html
+- mvn clean verify
+- find packaging/org.obeonetwork.dsl.uml2.update/target/ -mindepth 1 -maxdepth 1 -not -name '*.zip' -not -name 'repository' -print0 | xargs -0 rm -rf
+- mv packaging/org.obeonetwork.dsl.uml2.update/target/org.obeonetwork.dsl.uml2.update-*-SNAPSHOT.zip packaging/org.obeonetwork.dsl.uml2.update/target/org.obeonetwork.dsl.uml2.update-nightly.zip
+- mvn clean package -f releng/org.obeonetwork.dsl.uml2.product.parent/pom.xml
+- find packaging/org.obeonetwork.dsl.uml2.product/target/products/ -mindepth 1 -maxdepth 1 -not -name '*.zip' -print0 | xargs -0 rm -rf
+- find releng/org.obeonetwork.dsl.uml2.target/ -mindepth 1 -maxdepth 1 -not -name '*.tpd' -print0 | xargs -0 rm -rf
+- if [[ "$TRAVIS_TAG" == "" ]]; then mkdir nightly; cp -r packaging/org.obeonetwork.dsl.uml2.update/target/ nightly; cp -r releng/org.obeonetwork.dsl.uml2.target/ nightly; mkdir nightly/bundles; cp -r packaging/org.obeonetwork.dsl.uml2.product/
+- if [[ "$TRAVIS_TAG" != "" ]]; then mkdir ${TRAVIS_TAG}; cp -r packaging/org.obeonetwork.dsl.uml2.update/target/ ${TRAVIS_TAG}; mkdir ${TRAVIS_TAG}/bundles; cp -r packaging/org.obeonetwork.dsl.uml2.product/target/products/ ${TRAVIS_TAG}/bundles;  exit 0; fi
+- ls ${TRAVIS_TAG}
+- ls ${TRAVIS_TAG}/bundles
+after_script:
 - chmod a+x travis-promote.sh
 - ./travis-promote.sh
+before_deploy:
+- export NIGHTLY=$TRAVIS_BUILD_DIR/nightly
+- if [[ "$TRAVIS_TAG" == "" ]]; then s3cmd del -r s3://uml-designer/nightly; exit 0; fi
+- if [[ "$TRAVIS_TAG" != "" ]]; then export RELEASE_TAG=$TRAVIS_BUILD_DIR/$TRAVIS_TAG; exit 0; fi
+deploy:
+  - provider: s3
+    access_key_id: AKIAJBMGYTQSRYMJHQKQ
+    secret_access_key:
+      secure: e7nTVGAnegvoba6ucXEJwJnub8oeWSUVOShQ2XBpxr45/mIPLmF+HtTPN9JpZyG6hK2E5IqQ1bHndjPT9E7blXQKEHPYVzeJd7XBHyzEnS3LMMWeI/TxO73hxScereW/OHYalgTHJK6wynUyqvCf/uO7dqTvpd059Q9DILC6qTI=
+    bucket: uml-designer
+    local-dir: ${NIGHTLY}
+    acl: public_read
+    skip_cleanup: true
+    region: eu-central-1
+    upload-dir: "nightly"
+  - provider: s3
+    access_key_id: AKIAJBMGYTQSRYMJHQKQ
+    secret_access_key:
+      secure: e7nTVGAnegvoba6ucXEJwJnub8oeWSUVOShQ2XBpxr45/mIPLmF+HtTPN9JpZyG6hK2E5IqQ1bHndjPT9E7blXQKEHPYVzeJd7XBHyzEnS3LMMWeI/TxO73hxScereW/OHYalgTHJK6wynUyqvCf/uO7dqTvpd059Q9DILC6qTI=
+    bucket: uml-designer
+    local-dir: ${RELEASE_TAG}
+    acl: public_read
+    skip_cleanup: true
+    region: eu-central-1
+    upload-dir: "release"
+    on:
+      tags: true
+      all_branches: true
+      repo: ObeoNetwork/UML-Designer
+dd:
+  secure: SVW8lL8L5J7f/AgTRm69vYlOVx+U/grtQM52Ue/ZaHtNhZEuXbz2FmPhMzK3k7Adlqw2vbrzmBe78svbHvMLOuqWGPfcmYlBLeSDQPp8VI6KLpGt+y2UltoSdLKjnXyn6KCerXYm4FTdqxtZDuso52THGNC0Enn3kHv6d9tR4qw=
