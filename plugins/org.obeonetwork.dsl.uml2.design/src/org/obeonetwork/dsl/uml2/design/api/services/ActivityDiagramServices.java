@@ -34,6 +34,7 @@ import org.eclipse.uml2.uml.DataStoreNode;
 import org.eclipse.uml2.uml.DecisionNode;
 import org.eclipse.uml2.uml.Element;
 import org.eclipse.uml2.uml.ExecutableNode;
+import org.eclipse.uml2.uml.ExpansionRegion;
 import org.eclipse.uml2.uml.FinalNode;
 import org.eclipse.uml2.uml.ForkNode;
 import org.eclipse.uml2.uml.InitialNode;
@@ -51,6 +52,7 @@ import org.eclipse.uml2.uml.ParameterDirectionKind;
 import org.eclipse.uml2.uml.Pin;
 import org.eclipse.uml2.uml.Signal;
 import org.eclipse.uml2.uml.SignalEvent;
+import org.eclipse.uml2.uml.StructuredActivityNode;
 import org.eclipse.uml2.uml.TimeEvent;
 import org.eclipse.uml2.uml.Trigger;
 import org.eclipse.uml2.uml.Type;
@@ -257,6 +259,22 @@ public class ActivityDiagramServices extends AbstractDiagramServices {
 	}
 
 	/**
+	 * @param context
+	 * @return the parent structureactivitynode of the context object
+	 */
+	public StructuredActivityNode findParentStructuredActivityNode(Element context) {
+		if (context instanceof StructuredActivityNode) {
+			return (StructuredActivityNode)context;
+		}
+
+		if (context.eContainer() != null) {
+			return findParentStructuredActivityNode((Element)context.eContainer());
+		}
+
+		return null;
+	}
+
+	/**
 	 * Get the {@link AcceptEventAction} elements for the given context.
 	 *
 	 * @param context
@@ -304,6 +322,8 @@ public class ActivityDiagramServices extends AbstractDiagramServices {
 					}
 				}
 			}
+		} else if (context instanceof StructuredActivityNode) {
+			childNodes = ((StructuredActivityNode)context).getNodes();
 		} else if (context instanceof ActivityPartition) {
 			childNodes = ((ActivityPartition)context).getNodes();
 		} else if (context instanceof InterruptibleActivityRegion) {
@@ -557,6 +577,9 @@ public class ActivityDiagramServices extends AbstractDiagramServices {
 		final List<ActivityNode> childNodes = new ArrayList<ActivityNode>(allActivityNodes);
 		for (final ActivityNode activityNode : allActivityNodes) {
 			if (activityNode instanceof AcceptEventAction) {
+				childNodes.remove(activityNode);
+			}
+			if (activityNode instanceof ExpansionRegion) {
 				childNodes.remove(activityNode);
 			}
 		}

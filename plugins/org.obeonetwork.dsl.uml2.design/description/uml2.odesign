@@ -3929,7 +3929,7 @@
         </ownedRules>
       </validationSet>
       <defaultLayer name="Activity">
-        <edgeMappings name="AD_ControlFlow" deletionDescription="//@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Reused%20Description']/@toolSection/@subSections[name='existingElements']/@ownedTools[name='DEL_DeleteFromModel']" labelDirectEdit="//@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Reused%20Description']/@toolSection/@subSections[name='directEdit']/@ownedTools[name='NamedElementServiceDirectEdit']" semanticCandidatesExpression="feature:edge" semanticElements="service:getSemanticElements" doubleClickDescription="//@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Reused%20Description']/@toolSection/@subSections[name='properties']/@ownedTools[name='Open%20properties%20wizard']" documentation="Edge specified with source mapping as the target semantic (&amp; vice versa) to work around top to bottom layout (see VP-930)" sourceMapping="//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subContainerMappings[name='AD_ExecutableNode'] //@ownedViewpoints[name='Design']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subNodeMappings[name='AD_ControlNode']" targetMapping="//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subNodeMappings[name='AD_ControlNode'] //@ownedViewpoints[name='Design']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subContainerMappings[name='AD_ExecutableNode']" targetFinderExpression="feature:target" sourceFinderExpression="feature:source" domainClass="uml.ControlFlow" useDomainElement="true" reconnections="//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@toolSections.0/@subSections[name='reconnect']/@ownedTools[name='AD_ReconnectControlSource'] //@ownedViewpoints[name='Design']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@toolSections.0/@subSections[name='reconnect']/@ownedTools[name='AD_ReconnectControlTarget']">
+        <edgeMappings name="AD_ControlFlow" deletionDescription="//@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Reused%20Description']/@toolSection/@subSections[name='existingElements']/@ownedTools[name='DEL_DeleteFromModel']" labelDirectEdit="//@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Reused%20Description']/@toolSection/@subSections[name='directEdit']/@ownedTools[name='NamedElementServiceDirectEdit']" semanticCandidatesExpression="aql:self.eAllContents()->filter(uml::ControlFlow)" semanticElements="service:getSemanticElements" doubleClickDescription="//@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Reused%20Description']/@toolSection/@subSections[name='properties']/@ownedTools[name='Open%20properties%20wizard']" documentation="Edge specified with source mapping as the target semantic (&amp; vice versa) to work around top to bottom layout (see VP-930)" sourceMapping="//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subContainerMappings[name='AD_ExecutableNode'] //@ownedViewpoints[name='Design']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subNodeMappings[name='AD_ControlNode']" targetMapping="//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subNodeMappings[name='AD_ControlNode'] //@ownedViewpoints[name='Design']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subContainerMappings[name='AD_ExecutableNode']" targetFinderExpression="feature:target" sourceFinderExpression="feature:source" domainClass="uml.ControlFlow" useDomainElement="true" reconnections="//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@toolSections.0/@subSections[name='reconnect']/@ownedTools[name='AD_ReconnectControlSource'] //@ownedViewpoints[name='Design']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@toolSections.0/@subSections[name='reconnect']/@ownedTools[name='AD_ReconnectControlTarget']">
           <style routingStyle="manhattan">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             <centerLabelStyleDescription showIcon="false" labelExpression="service:computeUmlLabel">
@@ -3945,7 +3945,7 @@
             </style>
           </conditionnalStyles>
         </edgeMappings>
-        <edgeMappings name="AD_ObjectFlow" deletionDescription="//@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Reused%20Description']/@toolSection/@subSections[name='existingElements']/@ownedTools[name='DEL_DeleteFromModel']" labelDirectEdit="//@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Reused%20Description']/@toolSection/@subSections[name='directEdit']/@ownedTools[name='NamedElementServiceDirectEdit']" semanticCandidatesExpression="feature:edge" semanticElements="service:getSemanticElements" doubleClickDescription="//@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Reused%20Description']/@toolSection/@subSections[name='properties']/@ownedTools[name='Open%20properties%20wizard']" documentation="Edge specified with source mapping as the target semantic (&amp; vice versa) to work around top to bottom layout (see VP-930)" sourceMapping="//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subContainerMappings[name='AD_ExecutableNode']/@borderedNodeMappings[name='AD_InputPin'] //@ownedViewpoints[name='Design']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subContainerMappings[name='AD_DataStore'] //@ownedViewpoints[name='Design']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@borderedNodeMappings[name='AD_Parameter'] //@ownedViewpoints[name='Design']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subNodeMappings[name='AD_ControlNode'] //@ownedViewpoints[name='Design']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subContainerMappings[name='AD_ExecutableNode']/@borderedNodeMappings[name='AD_OutputPin']" targetMapping="//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subContainerMappings[name='AD_ExecutableNode']/@borderedNodeMappings[name='AD_InputPin'] //@ownedViewpoints[name='Design']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subContainerMappings[name='AD_DataStore'] //@ownedViewpoints[name='Design']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@borderedNodeMappings[name='AD_Parameter'] //@ownedViewpoints[name='Design']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subNodeMappings[name='AD_ControlNode'] //@ownedViewpoints[name='Design']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subContainerMappings[name='AD_ExecutableNode']/@borderedNodeMappings[name='AD_OutputPin']" targetFinderExpression="feature:target" sourceFinderExpression="feature:source" domainClass="uml.ObjectFlow" useDomainElement="true" reconnections="//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@toolSections.0/@subSections[name='reconnect']/@ownedTools[name='AD_ReconnectObjectFlowSource'] //@ownedViewpoints[name='Design']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@toolSections.0/@subSections[name='reconnect']/@ownedTools[name='AD_ReconnectObjectFlowTarget']">
+        <edgeMappings name="AD_ObjectFlow" deletionDescription="//@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Reused%20Description']/@toolSection/@subSections[name='existingElements']/@ownedTools[name='DEL_DeleteFromModel']" labelDirectEdit="//@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Reused%20Description']/@toolSection/@subSections[name='directEdit']/@ownedTools[name='NamedElementServiceDirectEdit']" semanticCandidatesExpression="aql:self.eAllContents()->filter(uml::ObjectFlow)" semanticElements="service:getSemanticElements" doubleClickDescription="//@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Reused%20Description']/@toolSection/@subSections[name='properties']/@ownedTools[name='Open%20properties%20wizard']" documentation="Edge specified with source mapping as the target semantic (&amp; vice versa) to work around top to bottom layout (see VP-930)" sourceMapping="//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subContainerMappings[name='AD_ExecutableNode']/@borderedNodeMappings[name='AD_InputPin'] //@ownedViewpoints[name='Design']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subContainerMappings[name='AD_DataStore'] //@ownedViewpoints[name='Design']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@borderedNodeMappings[name='AD_Parameter'] //@ownedViewpoints[name='Design']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subNodeMappings[name='AD_ControlNode'] //@ownedViewpoints[name='Design']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subContainerMappings[name='AD_ExecutableNode']/@borderedNodeMappings[name='AD_OutputPin'] //@ownedViewpoints[name='Design']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subContainerMappings[name='AD_ExpansionRegion']/@borderedNodeMappings[name='AD_ExpansionNode']" targetMapping="//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subContainerMappings[name='AD_ExecutableNode']/@borderedNodeMappings[name='AD_InputPin'] //@ownedViewpoints[name='Design']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subContainerMappings[name='AD_DataStore'] //@ownedViewpoints[name='Design']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@borderedNodeMappings[name='AD_Parameter'] //@ownedViewpoints[name='Design']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subNodeMappings[name='AD_ControlNode'] //@ownedViewpoints[name='Design']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subContainerMappings[name='AD_ExecutableNode']/@borderedNodeMappings[name='AD_OutputPin'] //@ownedViewpoints[name='Design']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subContainerMappings[name='AD_ExpansionRegion']/@borderedNodeMappings[name='AD_ExpansionNode']" targetFinderExpression="feature:target" sourceFinderExpression="feature:source" domainClass="uml.ObjectFlow" useDomainElement="true" reconnections="//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@toolSections.0/@subSections[name='reconnect']/@ownedTools[name='AD_ReconnectObjectFlowSource'] //@ownedViewpoints[name='Design']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@toolSections.0/@subSections[name='reconnect']/@ownedTools[name='AD_ReconnectObjectFlowTarget']">
           <style routingStyle="manhattan">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_gray']"/>
             <centerLabelStyleDescription showIcon="false" labelExpression="service:computeUmlLabel">
@@ -4114,6 +4114,20 @@
               <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
             </style>
           </subContainerMappings>
+          <subContainerMappings name="AD_ExpansionRegion" deletionDescription="//@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Reused%20Description']/@toolSection/@subSections[name='existingElements']/@ownedTools[name='DEL_DeleteFromModel']" semanticCandidatesExpression="feature:eAllContents" domainClass="uml.ExpansionRegion" reusedNodeMappings="//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subNodeMappings[name='AD_ControlNode'] //@ownedViewpoints[name='Design']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subNodeMappings[name='AD_AcceptEventAction']" reusedContainerMappings="//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subContainerMappings[name='AD_DataStore'] //@ownedViewpoints[name='Design']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subContainerMappings[name='AD_ExecutableNode'] //@ownedViewpoints[name='Design']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subContainerMappings[name='AD_ExpansionRegion']">
+            <borderedNodeMappings name="AD_ExpansionNode" semanticCandidatesExpression="feature:eAllContents" domainClass="uml.ExpansionNode">
+              <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="" sizeComputationExpression="-1" labelPosition="node" workspacePath="/org.obeonetwork.dsl.uml2.design/images/expansionNodeHori.svg">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </style>
+            </borderedNodeMappings>
+            <style xsi:type="style:FlatContainerStyleDescription" arcWidth="25" arcHeight="25" showIcon="false" labelExpression="service:computeUmlLabel" roundedCorner="true">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+            </style>
+          </subContainerMappings>
           <style xsi:type="style:FlatContainerStyleDescription" arcWidth="25" arcHeight="25" borderSizeComputationExpression="1" labelSize="9" labelExpression="service:computeUmlLabel" roundedCorner="true" backgroundStyle="Liquid" foregroundColor="//@userColorsPalettes[name='UMLPalette']/@entries[name='lighter%20purple']">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_purple']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -4166,16 +4180,27 @@
               <viewVariable name="containerView"/>
               <initialOperation>
                 <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:container">
-                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="service:findParentActivity">
-                    <subModelOperations xsi:type="tool:CreateInstance" typeName="uml.InitialNode" referenceName="ownedNode">
-                      <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="service:computeDefaultName"/>
-                      <subModelOperations xsi:type="tool:If" conditionExpression="aql:container->filter(uml::ActivityPartition)->size() > 0">
-                        <subModelOperations xsi:type="tool:SetValue" featureName="inPartition" valueExpression="var:container"/>
+                  <subModelOperations xsi:type="tool:Switch">
+                    <cases conditionExpression="aql:container->filter(uml::StructuredActivityNode)->size() > 0">
+                      <subModelOperations xsi:type="tool:ChangeContext" browseExpression="service:findParentStructuredActivityNode">
+                        <subModelOperations xsi:type="tool:CreateInstance" typeName="uml.InitialNode" referenceName="node">
+                          <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="service:computeDefaultName"/>
+                        </subModelOperations>
                       </subModelOperations>
-                      <subModelOperations xsi:type="tool:If" conditionExpression="aql:container->filter(uml::InterruptibleActivityRegion)->size()>0">
-                        <subModelOperations xsi:type="tool:SetValue" featureName="inInterruptibleRegion" valueExpression="var:container"/>
+                    </cases>
+                    <default>
+                      <subModelOperations xsi:type="tool:ChangeContext" browseExpression="service:findParentActivity">
+                        <subModelOperations xsi:type="tool:CreateInstance" typeName="uml.InitialNode" referenceName="ownedNode">
+                          <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="service:computeDefaultName"/>
+                          <subModelOperations xsi:type="tool:If" conditionExpression="aql:container->filter(uml::ActivityPartition)->size() > 0">
+                            <subModelOperations xsi:type="tool:SetValue" featureName="inPartition" valueExpression="var:container"/>
+                          </subModelOperations>
+                          <subModelOperations xsi:type="tool:If" conditionExpression="aql:container->filter(uml::InterruptibleActivityRegion)->size()>0">
+                            <subModelOperations xsi:type="tool:SetValue" featureName="inInterruptibleRegion" valueExpression="var:container"/>
+                          </subModelOperations>
+                        </subModelOperations>
                       </subModelOperations>
-                    </subModelOperations>
+                    </default>
                   </subModelOperations>
                 </firstModelOperations>
               </initialOperation>
@@ -4185,16 +4210,27 @@
               <viewVariable name="containerView"/>
               <initialOperation>
                 <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:container">
-                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="service:findParentActivity">
-                    <subModelOperations xsi:type="tool:CreateInstance" typeName="uml.ActivityFinalNode" referenceName="ownedNode">
-                      <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="service:computeDefaultName"/>
-                      <subModelOperations xsi:type="tool:If" conditionExpression="aql:container->filter(uml::ActivityPartition)->size() > 0">
-                        <subModelOperations xsi:type="tool:SetValue" featureName="inPartition" valueExpression="var:container"/>
+                  <subModelOperations xsi:type="tool:Switch">
+                    <cases conditionExpression="aql:container->filter(uml::StructuredActivityNode)->size() > 0">
+                      <subModelOperations xsi:type="tool:ChangeContext" browseExpression="service:findParentStructuredActivityNode">
+                        <subModelOperations xsi:type="tool:CreateInstance" typeName="uml.ActivityFinalNode" referenceName="ownedNode">
+                          <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="service:computeDefaultName"/>
+                        </subModelOperations>
                       </subModelOperations>
-                      <subModelOperations xsi:type="tool:If" conditionExpression="aql:container->filter(uml::InterruptibleActivityRegion)->size()>0">
-                        <subModelOperations xsi:type="tool:SetValue" featureName="inInterruptibleRegion" valueExpression="var:container"/>
+                    </cases>
+                    <default>
+                      <subModelOperations xsi:type="tool:ChangeContext" browseExpression="service:findParentActivity">
+                        <subModelOperations xsi:type="tool:CreateInstance" typeName="uml.ActivityFinalNode" referenceName="ownedNode">
+                          <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="service:computeDefaultName"/>
+                          <subModelOperations xsi:type="tool:If" conditionExpression="aql:container->filter(uml::ActivityPartition)->size() > 0">
+                            <subModelOperations xsi:type="tool:SetValue" featureName="inPartition" valueExpression="var:container"/>
+                          </subModelOperations>
+                          <subModelOperations xsi:type="tool:If" conditionExpression="aql:container->filter(uml::InterruptibleActivityRegion)->size()>0">
+                            <subModelOperations xsi:type="tool:SetValue" featureName="inInterruptibleRegion" valueExpression="var:container"/>
+                          </subModelOperations>
+                        </subModelOperations>
                       </subModelOperations>
-                    </subModelOperations>
+                    </default>
                   </subModelOperations>
                 </firstModelOperations>
               </initialOperation>
@@ -4212,6 +4248,9 @@
                       </subModelOperations>
                       <subModelOperations xsi:type="tool:If" conditionExpression="aql:container->filter(uml::InterruptibleActivityRegion)->size()>0">
                         <subModelOperations xsi:type="tool:SetValue" featureName="inInterruptibleRegion" valueExpression="var:container"/>
+                      </subModelOperations>
+                      <subModelOperations xsi:type="tool:If" conditionExpression="aql:container->filter(uml::StructuredActivityNode)->size() > 0">
+                        <subModelOperations xsi:type="tool:MoveElement" newContainerExpression="var:container" featureName="node"/>
                       </subModelOperations>
                     </subModelOperations>
                   </subModelOperations>
@@ -4232,6 +4271,9 @@
                       <subModelOperations xsi:type="tool:If" conditionExpression="aql:container->filter(uml::InterruptibleActivityRegion)->size()>0">
                         <subModelOperations xsi:type="tool:SetValue" featureName="inInterruptibleRegion" valueExpression="var:container"/>
                       </subModelOperations>
+                      <subModelOperations xsi:type="tool:If" conditionExpression="aql:container->filter(uml::StructuredActivityNode)->size() > 0">
+                        <subModelOperations xsi:type="tool:MoveElement" newContainerExpression="var:container" featureName="node"/>
+                      </subModelOperations>
                     </subModelOperations>
                   </subModelOperations>
                 </firstModelOperations>
@@ -4251,6 +4293,9 @@
                       <subModelOperations xsi:type="tool:If" conditionExpression="aql:container->filter(uml::InterruptibleActivityRegion)->size()>0">
                         <subModelOperations xsi:type="tool:SetValue" featureName="inInterruptibleRegion" valueExpression="var:container"/>
                       </subModelOperations>
+                      <subModelOperations xsi:type="tool:If" conditionExpression="aql:container->filter(uml::StructuredActivityNode)->size() > 0">
+                        <subModelOperations xsi:type="tool:MoveElement" newContainerExpression="var:container" featureName="node"/>
+                      </subModelOperations>
                     </subModelOperations>
                   </subModelOperations>
                 </firstModelOperations>
@@ -4269,6 +4314,9 @@
                       </subModelOperations>
                       <subModelOperations xsi:type="tool:If" conditionExpression="aql:container->filter(uml::InterruptibleActivityRegion)->size()>0">
                         <subModelOperations xsi:type="tool:SetValue" featureName="inInterruptibleRegion" valueExpression="var:container"/>
+                      </subModelOperations>
+                      <subModelOperations xsi:type="tool:If" conditionExpression="aql:container->filter(uml::StructuredActivityNode)->size() > 0">
+                        <subModelOperations xsi:type="tool:MoveElement" newContainerExpression="var:container" featureName="node"/>
                       </subModelOperations>
                     </subModelOperations>
                   </subModelOperations>
@@ -4293,6 +4341,9 @@
                         <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="aql:joinNode.name"/>
                         <subModelOperations xsi:type="tool:SetValue" featureName="value" valueExpression="true"/>
                       </subModelOperations>
+                      <subModelOperations xsi:type="tool:If" conditionExpression="aql:container->filter(uml::StructuredActivityNode)->size() > 0">
+                        <subModelOperations xsi:type="tool:MoveElement" newContainerExpression="var:container" featureName="node"/>
+                      </subModelOperations>
                     </subModelOperations>
                   </subModelOperations>
                 </firstModelOperations>
@@ -4314,6 +4365,9 @@
                       </subModelOperations>
                       <subModelOperations xsi:type="tool:If" conditionExpression="aql:container->filter(uml::InterruptibleActivityRegion)->size()>0">
                         <subModelOperations xsi:type="tool:SetValue" featureName="inInterruptibleRegion" valueExpression="var:container"/>
+                      </subModelOperations>
+                      <subModelOperations xsi:type="tool:If" conditionExpression="aql:container->filter(uml::StructuredActivityNode)->size() > 0">
+                        <subModelOperations xsi:type="tool:MoveElement" newContainerExpression="var:container" featureName="node"/>
                       </subModelOperations>
                     </subModelOperations>
                   </subModelOperations>
@@ -4354,6 +4408,9 @@
                         <subModelOperations xsi:type="tool:If" conditionExpression="aql:container->filter(uml::InterruptibleActivityRegion)->size()>0">
                           <subModelOperations xsi:type="tool:SetValue" featureName="inInterruptibleRegion" valueExpression="var:container"/>
                         </subModelOperations>
+                        <subModelOperations xsi:type="tool:If" conditionExpression="aql:container->filter(uml::StructuredActivityNode)->size() > 0">
+                          <subModelOperations xsi:type="tool:MoveElement" newContainerExpression="var:container" featureName="node"/>
+                        </subModelOperations>
                       </subModelOperations>
                     </subModelOperations>
                   </subModelOperations>
@@ -4374,6 +4431,9 @@
                       </subModelOperations>
                       <subModelOperations xsi:type="tool:If" conditionExpression="aql:container->filter(uml::InterruptibleActivityRegion)->size()>0">
                         <subModelOperations xsi:type="tool:SetValue" featureName="inInterruptibleRegion" valueExpression="var:container"/>
+                      </subModelOperations>
+                      <subModelOperations xsi:type="tool:If" conditionExpression="aql:container->filter(uml::StructuredActivityNode)->size() > 0">
+                        <subModelOperations xsi:type="tool:MoveElement" newContainerExpression="var:container" featureName="node"/>
                       </subModelOperations>
                     </subModelOperations>
                   </subModelOperations>
@@ -4405,6 +4465,9 @@
                       <subModelOperations xsi:type="tool:If" conditionExpression="aql:container->filter(uml::InterruptibleActivityRegion)->size()>0">
                         <subModelOperations xsi:type="tool:SetValue" featureName="inInterruptibleRegion" valueExpression="var:container"/>
                       </subModelOperations>
+                      <subModelOperations xsi:type="tool:If" conditionExpression="aql:container->filter(uml::StructuredActivityNode)->size() > 0">
+                        <subModelOperations xsi:type="tool:MoveElement" newContainerExpression="var:container" featureName="node"/>
+                      </subModelOperations>
                     </subModelOperations>
                   </subModelOperations>
                 </firstModelOperations>
@@ -4434,6 +4497,9 @@
                       </subModelOperations>
                       <subModelOperations xsi:type="tool:If" conditionExpression="aql:container->filter(uml::InterruptibleActivityRegion)->size()>0">
                         <subModelOperations xsi:type="tool:SetValue" featureName="inInterruptibleRegion" valueExpression="var:container"/>
+                      </subModelOperations>
+                      <subModelOperations xsi:type="tool:If" conditionExpression="aql:container->filter(uml::StructuredActivityNode)->size() > 0">
+                        <subModelOperations xsi:type="tool:MoveElement" newContainerExpression="var:container" featureName="node"/>
                       </subModelOperations>
                     </subModelOperations>
                   </subModelOperations>
@@ -4468,6 +4534,9 @@
                       <subModelOperations xsi:type="tool:If" conditionExpression="aql:container->filter(uml::InterruptibleActivityRegion)->size()>0">
                         <subModelOperations xsi:type="tool:SetValue" featureName="inInterruptibleRegion" valueExpression="var:container"/>
                       </subModelOperations>
+                      <subModelOperations xsi:type="tool:If" conditionExpression="aql:container->filter(uml::StructuredActivityNode)->size() > 0">
+                        <subModelOperations xsi:type="tool:MoveElement" newContainerExpression="var:container" featureName="node"/>
+                      </subModelOperations>
                     </subModelOperations>
                   </subModelOperations>
                 </firstModelOperations>
@@ -4500,6 +4569,9 @@
                       </subModelOperations>
                       <subModelOperations xsi:type="tool:If" conditionExpression="aql:container->filter(uml::InterruptibleActivityRegion)->size()>0">
                         <subModelOperations xsi:type="tool:SetValue" featureName="inInterruptibleRegion" valueExpression="var:container"/>
+                      </subModelOperations>
+                      <subModelOperations xsi:type="tool:If" conditionExpression="aql:container->filter(uml::StructuredActivityNode)->size() > 0">
+                        <subModelOperations xsi:type="tool:MoveElement" newContainerExpression="var:container" featureName="node"/>
                       </subModelOperations>
                     </subModelOperations>
                   </subModelOperations>
@@ -4541,6 +4613,9 @@
                       </subModelOperations>
                       <subModelOperations xsi:type="tool:If" conditionExpression="aql:container->filter(uml::InterruptibleActivityRegion)->size()>0">
                         <subModelOperations xsi:type="tool:SetValue" featureName="inInterruptibleRegion" valueExpression="var:container"/>
+                      </subModelOperations>
+                      <subModelOperations xsi:type="tool:If" conditionExpression="aql:container->filter(uml::StructuredActivityNode)->size() > 0">
+                        <subModelOperations xsi:type="tool:MoveElement" newContainerExpression="var:container" featureName="node"/>
                       </subModelOperations>
                     </subModelOperations>
                   </subModelOperations>
@@ -4584,6 +4659,9 @@
                     <subModelOperations xsi:type="tool:CreateInstance" typeName="uml.LiteralInteger" referenceName="weight" variableName="weight">
                       <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="aql:source.name+'_To_'+target.name+'_weight'"/>
                     </subModelOperations>
+                    <subModelOperations xsi:type="tool:If" conditionExpression="aql:container->filter(uml::StructuredActivityNode)->size() > 0">
+                      <subModelOperations xsi:type="tool:MoveElement" newContainerExpression="var:container" featureName="edge"/>
+                    </subModelOperations>
                   </subModelOperations>
                 </subModelOperations>
               </firstModelOperations>
@@ -4600,6 +4678,9 @@
                   <subModelOperations xsi:type="tool:CreateInstance" typeName="uml.ObjectFlow" referenceName="edge">
                     <subModelOperations xsi:type="tool:SetValue" featureName="source" valueExpression="var:source"/>
                     <subModelOperations xsi:type="tool:SetValue" featureName="target" valueExpression="var:target"/>
+                  </subModelOperations>
+                  <subModelOperations xsi:type="tool:If" conditionExpression="aql:container->filter(uml::StructuredActivityNode)->size() > 0">
+                    <subModelOperations xsi:type="tool:MoveElement" newContainerExpression="var:container" featureName="edge"/>
                   </subModelOperations>
                 </subModelOperations>
               </firstModelOperations>
@@ -4627,8 +4708,33 @@
                     <subModelOperations xsi:type="tool:ChangeContext" browseExpression="service:source.getInterruptibleRegion">
                       <subModelOperations xsi:type="tool:SetValue" featureName="interruptingEdge" valueExpression="var:flow"/>
                     </subModelOperations>
+                    <subModelOperations xsi:type="tool:If" conditionExpression="aql:container->filter(uml::StructuredActivityNode)->size() > 0">
+                      <subModelOperations xsi:type="tool:MoveElement" newContainerExpression="var:container" featureName="edge"/>
+                    </subModelOperations>
                   </subModelOperations>
                 </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool_1:ContainerCreationDescription" name="ExpansionRegion" containerMappings="//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subContainerMappings[name='AD_ExpansionRegion']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool:If" conditionExpression="aql:container->filter(uml::Activity)->size() > 0">
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="service:findParentActivity">
+                    <subModelOperations xsi:type="tool:CreateInstance" typeName="uml.ExpansionRegion" referenceName="ownedNode"/>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool_1:NodeCreationDescription" name="ExpansionNode" nodeMappings="//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subContainerMappings[name='AD_ExpansionRegion']/@borderedNodeMappings[name='AD_ExpansionNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool:CreateInstance" typeName="uml.ExpansionNode" referenceName="node"/>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>

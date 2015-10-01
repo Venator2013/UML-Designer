@@ -32,6 +32,7 @@ import org.eclipse.uml2.uml.Element;
 import org.eclipse.uml2.uml.ElementImport;
 import org.eclipse.uml2.uml.EnumerationLiteral;
 import org.eclipse.uml2.uml.ExecutionSpecification;
+import org.eclipse.uml2.uml.ExpansionRegion;
 import org.eclipse.uml2.uml.Expression;
 import org.eclipse.uml2.uml.Feature;
 import org.eclipse.uml2.uml.FunctionBehavior;
@@ -83,6 +84,26 @@ import org.obeonetwork.dsl.uml2.design.UMLDesignerPlugin;
 public class DisplayLabelSwitch extends UMLSwitch<String> implements ILabelConstants {
 
 	/**
+	 * Spaced column constant.
+	 */
+	private static final String SPACED_COLUMN = " : "; //$NON-NLS-1$
+
+	/**
+	 * Spaced column constant.
+	 */
+	private static final String SPACED_COMMA = ", "; //$NON-NLS-1$
+
+	/**
+	 * Closing brace constant.
+	 */
+	private static final String CLOSING_BRACE = "]"; //$NON-NLS-1$
+
+	/**
+	 * Opening brace constant.
+	 */
+	private static final String OPENING_BRACE = "["; //$NON-NLS-1$
+
+	/**
 	 * Compute the {@link Stereotype} label part for the given {@link Element}.
 	 *
 	 * @param element
@@ -117,26 +138,6 @@ public class DisplayLabelSwitch extends UMLSwitch<String> implements ILabelConst
 
 		return stereotypeLabel.toString();
 	}
-
-	/**
-	 * Spaced column constant.
-	 */
-	private static final String SPACED_COLUMN = " : "; //$NON-NLS-1$
-
-	/**
-	 * Spaced column constant.
-	 */
-	private static final String SPACED_COMMA = ", "; //$NON-NLS-1$
-
-	/**
-	 * Closing brace constant.
-	 */
-	private static final String CLOSING_BRACE = "]"; //$NON-NLS-1$
-
-	/**
-	 * Opening brace constant.
-	 */
-	private static final String OPENING_BRACE = "["; //$NON-NLS-1$
 
 	/**
 	 * Label provider.
@@ -340,6 +341,18 @@ public class DisplayLabelSwitch extends UMLSwitch<String> implements ILabelConst
 			}
 		}
 		return execution.getLabel();
+	}
+
+	/**
+	 * {@inheritDoc}
+	 */
+	@Override
+	public String caseExpansionRegion(ExpansionRegion object) {
+		final StringBuffer expansionRegionLabel = new StringBuffer();
+		expansionRegionLabel.append(OPEN_QUOTE_MARK);
+		expansionRegionLabel.append(object.getMode().getLiteral());
+		expansionRegionLabel.append(CLOSE_QUOTE_MARK);
+		return expansionRegionLabel.toString();
 	}
 
 	/**
